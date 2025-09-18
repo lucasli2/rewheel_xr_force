@@ -26,9 +26,14 @@ export const getRevisionInformation = (revision) => {
 export const allGenerations = [1, 2, 3, 4, 5, 6, 7]
 export const allPreGTGenerations = [1, 2, 3, 4, 5, 7]
 
+//Returns GT no matter what hardware id (spoofed)
 export const inferBoardFromHardwareRevision = (revision) => {
-  const generation = Math.floor(revision / 1000)
-  const subrevision = revision % 1000
-
-  return Object.keys(BoardGeneration)[generation - 1]
+  return Object.keys(BoardGeneration)[5]
 }
+
+// export const inferBoardFromHardwareRevision = (revision) => {
+//   const generation = Math.floor(revision / 1000)
+//   const subrevision = revision % 1000
+
+//   return Object.keys(BoardGeneration)[generation - 1]
+// }
